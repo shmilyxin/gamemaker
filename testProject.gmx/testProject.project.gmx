@@ -8,17 +8,20 @@
   <sprites name="sprites">
     <sprite>sprites\option_spt</sprite>
     <sprite>sprites\main_controler_spt</sprite>
+    <sprite>sprites\sea_spt</sprite>
   </sprites>
   <backgrounds name="background">
-    <background>background\background0</background>
+    <background>background\title_bg</background>
+    <background>background\map_bg</background>
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\option_obj</object>
     <object>objects\controler_obj</object>
+    <object>objects\sea_obj</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\StrartTIttle</room>
+    <room>rooms\title_room</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
