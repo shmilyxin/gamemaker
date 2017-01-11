@@ -8,9 +8,27 @@
   <sprites name="sprites">
     <sprite>sprites\option_spt</sprite>
     <sprite>sprites\main_controler_spt</sprite>
-    <sprite>sprites\sea_spt</sprite>
     <sprites name="unit">
       <sprite>sprites\wangzi_spt</sprite>
+    </sprites>
+    <sprites name="terrain">
+      <sprite>sprites\sea_spt</sprite>
+      <sprite>sprites\bingyuan_spt</sprite>
+      <sprite>sprites\caodi_spt</sprite>
+      <sprite>sprites\heliu_spt</sprite>
+      <sprite>sprites\pubu_spt</sprite>
+      <sprite>sprites\qiantan_spt</sprite>
+      <sprite>sprites\senlin_spt</sprite>
+      <sprite>sprites\sadi_spt</sprite>
+      <sprite>sprites\shanye_spt</sprite>
+      <sprite>sprites\xuanya_spt</sprite>
+      <sprite>sprites\xuanya_r_spt</sprite>
+      <sprite>sprites\xuanya_l_spt</sprite>
+      <sprite>sprites\xuedi_spt</sprite>
+      <sprite>sprites\xuelin_spt</sprite>
+      <sprite>sprites\xueshan_spt</sprite>
+      <sprite>sprites\zaoze_a_spt</sprite>
+      <sprite>sprites\zaoze_b_spt</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -29,6 +47,7 @@
     </objects>
     <objects name="terrain">
       <object>objects\sea_obj</object>
+      <object>objects\caodi_obj</object>
     </objects>
     <objects name="unit">
       <object>objects\wangzi_obj</object>
