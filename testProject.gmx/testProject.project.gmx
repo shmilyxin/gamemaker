@@ -11,6 +11,7 @@
     <sprites name="unit">
       <sprite>sprites\wangzi_spt</sprite>
     </sprites>
+    <sprite>sprites\biankuang_spt</sprite>
     <sprites name="terrain">
       <sprite>sprites\sea_spt</sprite>
       <sprite>sprites\bingyuan_spt</sprite>
@@ -38,6 +39,7 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\image_index_scp.gml</script>
+    <script>scripts\script1.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\option_obj</object>
@@ -47,10 +49,12 @@
     </objects>
     <objects name="terrain">
       <object>objects\sea_obj</object>
-      <object>objects\caodi_obj</object>
     </objects>
     <objects name="unit">
       <object>objects\wangzi_obj</object>
+    </objects>
+    <objects name="caidankuang">
+      <object>objects\biankuang_obj</object>
     </objects>
   </objects>
   <rooms name="rooms">
