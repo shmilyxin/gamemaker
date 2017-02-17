@@ -25,14 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(0,0,biankuang_obj);
-var blockarray;
-for(var i = 0;i&lt;16;i+=1){
-    for(var j = 0;j&lt;16;j+=1){
-        blockarray[i,j] = instance_create(0+i*32,0+j*32,sea_obj);
-    }
-}
-instance_create(32,32,wangzi_obj);
+            <string>scr_initLevel(1);
 timer = 0;
 
 </string>
