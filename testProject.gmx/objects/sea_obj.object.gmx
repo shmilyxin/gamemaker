@@ -49,7 +49,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var num = image_index_scp(state1_control_obj.timer);
+            <string>var num = scr_anyc_step(global.timer);
 if(num%2&lt;1){
     image_index=2;
 }else{
