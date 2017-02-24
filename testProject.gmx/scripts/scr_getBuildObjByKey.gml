@@ -13,8 +13,12 @@ if(is_string(key)){
     key = real(key);
 }
 switch(key){
+    case 1 : return chengbao1_obj;
+    case 2 : return chengbao2_obj;
     case 3 : return jiaotang1_obj;
     case 4 : return jiaotang2_obj;
+    case 5 : return chunzhuang1_obj;
+    case 6 : return chunzhuang2_obj;
 }
 
 

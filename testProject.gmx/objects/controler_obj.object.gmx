@@ -28,6 +28,7 @@
             <string>scr_defGlobal();
 instance_create(178,224,option_obj);
 /**
+
 //var file = file_text_open_read( working_directory+"/Level/state1");
 //var str = file_text_read_string(file);
 //file_text_close(file);
@@ -48,10 +49,16 @@ var gridStr= ds_grid_write(grid);
 ds_map_add(map,"map",gridStr);
 ds_map_add(map,"mapWidth",width);
 ds_map_add(map,"mapHeight",height);
-var buildStr = "2,6,3;15,5,4";
+var buildStr = "1,5,3;14,4,4;1,8,1;14,1,2;4,6,5;11,3,6";
 var buildList = scr_splitToList(buildStr,";");
 var buildListStr = ds_list_write(buildList);
 ds_map_add(map,"buildList",buildListStr);
+
+var unitStr = "1,8,1"
+var unitList = scr_splitToList(unitStr,";");
+var unitListStr = ds_list_write(unitList);
+ds_map_add(map,"unitList",unitListStr);
+
 var file2 = file_text_open_write(working_directory+"/Level/level1.ini");
 var str = ds_map_write(map);
 file_text_write_string(file2,str);
@@ -59,7 +66,6 @@ file_text_close(file2);
 show_message(str);
 
 **/
-
 
 </string>
           </argument>

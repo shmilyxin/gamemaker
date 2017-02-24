@@ -20,7 +20,7 @@
   <width>32</width>
   <height>32</height>
   <frames>
-    <frame index="0">images\wangzi_spt_0.png</frame>
-    <frame index="1">images\wangzi_spt_1.png</frame>
+    <frame index="0">images\wangzi1_spt_0.png</frame>
+    <frame index="1">images\wangzi1_spt_1.png</frame>
   </frames>
 </sprite>

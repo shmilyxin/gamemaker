@@ -63,7 +63,7 @@
   <sprites name="sprites">
     <sprite>sprites\main_controler_spt</sprite>
     <sprites name="unit">
-      <sprite>sprites\wangzi_spt</sprite>
+      <sprite>sprites\wangzi1_spt</sprite>
     </sprites>
     <sprite>sprites\biankuang_spt</sprite>
     <sprites name="terrain">
@@ -109,11 +109,13 @@
     <scripts name="map">
       <script>scripts\scr_getTerObjByKey.gml</script>
       <script>scripts\scr_getBuildObjByKey.gml</script>
+      <script>scripts\scr_getUnitObjByKey.gml</script>
       <script>scripts\scr_readMap.gml</script>
       <script>scripts\scr_createInstanceGrid.gml</script>
       <script>scripts\scr_initLevel.gml</script>
       <script>scripts\scr_moveView.gml</script>
       <script>scripts\scr_createBuildList.gml</script>
+      <script>scripts\scr_createUnitList.gml</script>
     </scripts>
     <scripts name="utils">
       <script>scripts\scr_splitToGrid.gml</script>
@@ -133,7 +135,7 @@
       <object>objects\state1_control_obj</object>
     </objects>
     <objects name="unit">
-      <object>objects\wangzi_obj</object>
+      <object>objects\wangzi1_obj</object>
     </objects>
     <objects name="caidankuang">
       <object>objects\biankuang_obj</object>
