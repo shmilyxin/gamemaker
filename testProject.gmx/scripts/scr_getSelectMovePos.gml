@@ -8,4 +8,3 @@ if(result>=limitMin&&result<=limitMax){
 }else{
     return position;
 }
-

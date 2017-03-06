@@ -1,14 +1,31 @@
 /**
 初始化关卡 argument0 关卡编号
 **/
-var num = argument1;
-var instanceMap = argument0;
+var num = argument0;
 view_xview[0]=0;
 view_yview[0]=0;
-ds_map_add(instanceMap,"viewX",0);
-ds_map_add(instanceMap,"viewY",0);
+ds_map_add(global.instanceMap,"viewX",0);
+ds_map_add(global.instanceMap,"viewY",0);
 var biankuang = instance_create(view_xview[0],view_yview[0],biankuang_obj);
-ds_map_add(instanceMap,"biankuang",biankuang);
+var btn1 = instance_create(view_xview[0]+global.offsetX_btn1,view_yview[0]+global.offsetY_btn,btn_obj);
+var btn2 = instance_create(view_xview[0]+global.offsetX_btn2,view_yview[0]+global.offsetY_btn,btn_obj);
+var btn3 = instance_create(view_xview[0]+global.offsetX_btn3,view_yview[0]+global.offsetY_btn,btn_obj);
+var btn4 = instance_create(view_xview[0]+global.offsetX_btn4,view_yview[0]+global.offsetY_btn,btn_obj);
+btn1.index=1;
+btn2.index=2;
+btn3.index=3;
+btn4.index=4;
+ds_map_add(global.instanceMap,"btn1",btn1);
+ds_map_add(global.instanceMap,"btn2",btn2);
+ds_map_add(global.instanceMap,"btn3",btn3);
+ds_map_add(global.instanceMap,"btn4",btn4);
+ds_map_add(global.instanceMap,"biankuang",biankuang);
+ds_list_clear(biankuang.allBtnList);
+ds_list_clear(biankuang.activeBtnList);
+ds_list_add(biankuang.allBtnList,btn1);
+ds_list_add(biankuang.allBtnList,btn2);
+ds_list_add(biankuang.allBtnList,btn3);
+ds_list_add(biankuang.allBtnList,btn4);
 
 var map = scr_readMap(num);
 var width = ds_map_find_value(map,"mapWidth");
@@ -32,12 +49,13 @@ var mapGrid = scr_createInstanceGrid(grid);
 var buildList = scr_createBuildList(buildStrList);
 var unitList = scr_createUnitList(unitStrList);
 
-ds_map_add(instanceMap,"mapGrid",mapGrid);
-ds_map_add(instanceMap,"buildList",buildList);
-ds_map_add(instanceMap,"unitList",unitList);
+ds_map_add(global.instanceMap,"mapGrid",mapGrid);
+ds_map_add(global.instanceMap,"buildList",buildList);
+ds_map_add(global.instanceMap,"unitList",unitList);
 
 
 
 
 
-instance_create(32,32,select_obj);
+var select = instance_create(32,32,select_obj);
+ds_map_add(global.instanceMap,"select",select);

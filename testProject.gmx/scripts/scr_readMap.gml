@@ -1,11 +1,11 @@
 /**
-读取地图 
-argument0 关卡编号 num类型 例 1 2 3 
-读取关卡内容 例如level1.map
-读成一个ds map
-其中 地图key        “map”       值为grid
-     mapGrid宽度key “mapWidth”  值为数字
-     mapGrid高度key “mapHeight” 值为数字
+璇诲彇鍦板浘 
+argument0 鍏冲崱缂栧彿 num绫诲瀷 渚?1 2 3 
+璇诲彇鍏冲崱鍐呭 渚嬪level1.map
+璇绘垚涓€涓猟s map
+鍏朵腑 鍦板浘key        鈥渕ap鈥?      鍊间负grid
+     mapGrid瀹藉害key 鈥渕apWidth鈥? 鍊间负鏁板瓧
+     mapGrid楂樺害key 鈥渕apHeight鈥?鍊间负鏁板瓧
 **/
 var stateLevel = argument0;
 var path = working_directory + "/Level"+"/level"+string(stateLevel)+".map";
@@ -17,5 +17,4 @@ while(!file_text_eof(file)){
 var map = ds_map_create();
 ds_map_read(map,str);
 return map;
-
 

@@ -27,6 +27,12 @@
             <kind>1</kind>
             <string>scr_defGlobal();
 instance_create(178,224,option_obj);
+//timeline_index=tl_timeline0;
+//timeline_running = true;
+//timeline_position = 0;
+//timeline_moment_add_script(tl_timeline0,room_speed * 60,scr_testScript());
+
+
 /**
 
 //var file = file_text_open_read( working_directory+"/Level/state1");

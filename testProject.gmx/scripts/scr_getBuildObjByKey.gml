@@ -1,12 +1,12 @@
 /**
- 1 城堡-1
- 2 城堡-2
- 3 教堂-1
- 4 教堂-2
- 5 村庄-1
- 6 村庄-2
- 7 港口-1
- 8 港口-2
+ 1 鍩庡牎-1
+ 2 鍩庡牎-2
+ 3 鏁欏爞-1
+ 4 鏁欏爞-2
+ 5 鏉戝簞-1
+ 6 鏉戝簞-2
+ 7 娓彛-1
+ 8 娓彛-2
 **/
 var key = argument0;
 if(is_string(key)){
@@ -20,5 +20,4 @@ switch(key){
     case 5 : return chunzhuang1_obj;
     case 6 : return chunzhuang2_obj;
 }
-
 

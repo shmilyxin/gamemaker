@@ -98,6 +98,7 @@
       <sprite>sprites\select_spt</sprite>
       <sprite>sprites\option_spt</sprite>
       <sprite>sprites\debug_spt</sprite>
+      <sprite>sprites\btn_spt</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -112,21 +113,35 @@
       <script>scripts\scr_getUnitObjByKey.gml</script>
       <script>scripts\scr_readMap.gml</script>
       <script>scripts\scr_createInstanceGrid.gml</script>
-      <script>scripts\scr_initLevel.gml</script>
-      <script>scripts\scr_moveView.gml</script>
       <script>scripts\scr_createBuildList.gml</script>
+      <script>scripts\scr_moveView.gml</script>
+      <script>scripts\scr_initLevel.gml</script>
       <script>scripts\scr_createUnitList.gml</script>
     </scripts>
     <scripts name="utils">
       <script>scripts\scr_splitToGrid.gml</script>
       <script>scripts\scr_splitToList.gml</script>
-      <script>scripts\scr_anyc_step.gml</script>
       <script>scripts\scr_defGlobal.gml</script>
+      <script>scripts\scr_anyc_step.gml</script>
       <script>scripts\scr_createLevelMap.gml</script>
       <script>scripts\scr_changeIndex.gml</script>
     </scripts>
     <scripts name="component">
-      <script>scripts\scr_getSelectMovePos.gml</script>
+      <scripts name="biankuang">
+        <script>scripts\scr_changeBtnSelect.gml</script>
+        <script>scripts\scr_biankuangChangeMode.gml</script>
+      </scripts>
+      <scripts name="button">
+        <script>scripts\scr_closeBtn.gml</script>
+        <script>scripts\scr_changeBtnSelected.gml</script>
+        <script>scripts\scr_changeBtnImage.gml</script>
+        <script>scripts\scr_initBtn.gml</script>
+      </scripts>
+      <scripts name="select">
+        <script>scripts\scr_stopSelect.gml</script>
+        <script>scripts\scr_getSelectMovePos.gml</script>
+        <script>scripts\scr_startSelect.gml</script>
+      </scripts>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -138,9 +153,9 @@
       <object>objects\wangzi1_obj</object>
     </objects>
     <objects name="caidankuang">
+      <object>objects\btn_obj</object>
       <object>objects\biankuang_obj</object>
     </objects>
-    <object>objects\constants_obj</object>
     <objects name="terrians">
       <object>objects\caodi_obj</object>
       <object>objects\xuanya_l_obj</object>
@@ -164,11 +179,14 @@
       <object>objects\chunzhuang2_obj</object>
     </objects>
     <objects name="component">
-      <object>objects\option_obj</object>
       <object>objects\debug_obj</object>
+      <object>objects\option_obj</object>
       <object>objects\select_obj</object>
     </objects>
   </objects>
+  <timelines name="timelines">
+    <timeline>timelines\tl_timeline0</timeline>
+  </timelines>
   <rooms name="rooms">
     <room>rooms\title_room</room>
     <room>rooms\state1_room</room>

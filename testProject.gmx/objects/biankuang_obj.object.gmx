@@ -7,7 +7,130 @@
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
-  <events/>
+  <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+mode = 0;//面板操作模式 0 代表当前操作地图 1代表当前操作面板
+isChanging = 0;
+allBtnList = ds_list_create();
+activeBtnList = ds_list_create();
+stateControl = null;
+selectedBtn = null;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="73">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_set_colour(c_white);
+var str = "";
+var str1 = "";
+var str2 = "";
+var str3 = "";
+    var btnTemp = id.allBtnList[|0];
+    str+="btn index:" + string(btnTemp.index)+" ";
+    str+="btn type:" + string(btnTemp.type)+" ";
+    str+="btn image:" + string(btnTemp.image_index)+" ";
+    str+="btn select:" + string(btnTemp.selected)+" ";
+         btnTemp = id.allBtnList[|1];
+    str1+="btn index:" + string(btnTemp.index)+" ";
+    str1+="btn type:" + string(btnTemp.type)+" ";
+    str1+="btn image:" + string(btnTemp.image_index)+" ";
+    str1+="btn select:" + string(btnTemp.selected)+" ";
+         btnTemp = id.allBtnList[|2];
+    str2+="btn index:" + string(btnTemp.index)+" ";
+    str2+="btn type:" + string(btnTemp.type)+" ";
+    str2+="btn image:" + string(btnTemp.image_index)+" ";
+    str2+="btn select:" + string(btnTemp.selected)+" ";
+         btnTemp = id.allBtnList[|3];
+    str3+="btn index:" + string(btnTemp.index)+" ";
+    str3+="btn type:" + string(btnTemp.type)+" ";
+    str3+="btn image:" + string(btnTemp.image_index)+" ";
+    str3+="btn select:" + string(btnTemp.selected)+" ";
+draw_text(0,0,str);
+draw_text(0,20,str1);
+draw_text(0,40,str2);
+draw_text(0,60,str3);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if keyboard_check(ord('K'))
+{
+if(isChanging == 0){
+    isChanging = 1;
+    scr_biankuangChangeMode(id);
+}
+   
+}
+if keyboard_check(ord('D'))
+{
+    if(isChanging == 0&amp;&amp;mode == 1){
+       scr_changeBtnSelect(id,2);
+    }
+}
+if keyboard_check(ord('A'))
+{
+    if(isChanging == 0&amp;&amp;mode == 1){
+       scr_changeBtnSelect(id,1);
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>0</PhysicsObjectShape>
