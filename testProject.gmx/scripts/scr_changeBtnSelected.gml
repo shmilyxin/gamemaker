@@ -1,6 +1,6 @@
 /**
-argument0 鎸夐挳瀹炰緥
-argument1 鏄惁鍙樹负閫変腑 true 鍙橀€変腑 false鍙樹笉閫変腑
+argument0 按钮实例
+argument1 按钮变换方式 true 变为选中 false 变为未选中
 **/
 var btn = argument0;
 var flag = argument1;

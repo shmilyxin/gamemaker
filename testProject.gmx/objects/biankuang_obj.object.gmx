@@ -59,7 +59,8 @@ var str = "";
 var str1 = "";
 var str2 = "";
 var str3 = "";
-    var btnTemp = id.allBtnList[|0];
+/**
+        var btnTemp = id.allBtnList[|0];
     str+="btn index:" + string(btnTemp.index)+" ";
     str+="btn type:" + string(btnTemp.type)+" ";
     str+="btn image:" + string(btnTemp.image_index)+" ";
@@ -79,6 +80,7 @@ var str3 = "";
     str3+="btn type:" + string(btnTemp.type)+" ";
     str3+="btn image:" + string(btnTemp.image_index)+" ";
     str3+="btn select:" + string(btnTemp.selected)+" ";
+**/
 draw_text(0,0,str);
 draw_text(0,20,str1);
 draw_text(0,40,str2);
@@ -107,11 +109,16 @@ draw_text(0,60,str3);
             <kind>1</kind>
             <string>if keyboard_check(ord('K'))
 {
-if(isChanging == 0){
-    isChanging = 1;
-    scr_biankuangChangeMode(id);
+    if(isChanging == 0){
+        isChanging = 1;
+        scr_biankuangChangeMode(id);
+    }
 }
-   
+if keyboard_check(ord('J'))
+{
+    if(mode == 0){
+        
+    }
 }
 if keyboard_check(ord('D'))
 {

@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>scr_defGlobal();
 instance_create(178,224,option_obj);
+
 //timeline_index=tl_timeline0;
 //timeline_running = true;
 //timeline_position = 0;
