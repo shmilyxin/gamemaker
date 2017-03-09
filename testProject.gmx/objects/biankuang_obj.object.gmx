@@ -117,7 +117,15 @@ draw_text(0,60,str3);
 if keyboard_check(ord('J'))
 {
     if(mode == 0){
-        
+        var select = global.instanceMap[? 'select'];
+        var indexArray = scr_getSelectIndex(select);
+        var unitArray = global.instanceMap[? 'unitArray'];
+        var unit = unitArray[indexArray[0],indexArray[1]];
+        if(unit!=undefined){
+           if(unit.operated==0){
+             scr_unitSelect(unit);
+           }
+        }
     }
 }
 if keyboard_check(ord('D'))

@@ -46,12 +46,12 @@ ds_list_read(unitStrList,unitStr);
 
 
 var mapGrid = scr_createInstanceGrid(grid);
-var buildList = scr_createBuildList(buildStrList);
-var unitList = scr_createUnitList(unitStrList);
+var buildArray = scr_createBuildArray(buildStrList);
+var unitArray = scr_createUnitArray(unitStrList);
 
 ds_map_add(global.instanceMap,"mapGrid",mapGrid);
-ds_map_add(global.instanceMap,"buildList",buildList);
-ds_map_add(global.instanceMap,"unitList",unitList);
+ds_map_add(global.instanceMap,"buildArray",buildArray);
+ds_map_add(global.instanceMap,"unitArray",unitArray);
 
 
 
