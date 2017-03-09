@@ -123,7 +123,7 @@ if keyboard_check(ord('J'))
         var unit = unitArray[indexArray[0],indexArray[1]];
         if(unit!=undefined){
            if(unit.operated==0){
-             scr_unitSelect(unit);
+             scr_unitSelect(unit,select);
            }
         }
     }

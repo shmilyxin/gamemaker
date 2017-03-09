@@ -156,6 +156,7 @@
     </objects>
     <objects name="unit">
       <object>objects\wangzi1_obj</object>
+      <object>objects\abstractUnit_obj</object>
     </objects>
     <objects name="caidankuang">
       <object>objects\btn_obj</object>
@@ -174,6 +175,7 @@
       <object>objects\shanye_obj</object>
       <object>objects\xuanya_obj</object>
       <object>objects\xuanya_r_obj</object>
+      <object>objects\abstactTer_obj</object>
     </objects>
     <objects name="build">
       <object>objects\jiaotang1_obj</object>

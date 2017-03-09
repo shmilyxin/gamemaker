@@ -34,6 +34,7 @@
  directionFlag = 0;  //是横向移动还是纵向移动 0为横向移动 1为纵向移动
  timerCount = 0;
  alarm[0] = 5;
+ mode = 0;           //当前操作模式 0为地图操作 1为单位操作
 </string>
           </argument>
         </arguments>
