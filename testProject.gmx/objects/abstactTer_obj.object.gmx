@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>movePoint = 0;
+xIndex =0;
+yIndex =0;
 </string>
           </argument>
         </arguments>

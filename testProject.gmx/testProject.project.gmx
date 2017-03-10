@@ -143,6 +143,11 @@
         <script>scripts\scr_getSelectMovePos.gml</script>
         <script>scripts\scr_startSelect.gml</script>
         <script>scripts\scr_getSelectIndex.gml</script>
+        <script>scripts\scr_getRoute.gml</script>
+        <script>scripts\scr_getMinCostMap.gml</script>
+        <script>scripts\scr_insertAroundBlock.gml</script>
+        <script>scripts\scr_checkTerListContant.gml</script>
+        <script>scripts\scr_insertNextBlock.gml</script>
       </scripts>
     </scripts>
     <scripts name="unit">

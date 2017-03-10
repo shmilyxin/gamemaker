@@ -19,6 +19,8 @@ for(var i = 0;i<height;i=i+1){
         var xPosition = scr_changeIndex(j,global.mapWidth,global.mapWidth);
         var yPosition = scr_changeIndex(i,global.mapWidth,global.mapWidth);
         var instance = instance_create(xPosition,yPosition,obj);
+        instance.xIndex = j;
+        instance.yIndex = i;
         ds_grid_add(returnGrid,j,i,instance);
     }
 }
