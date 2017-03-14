@@ -4,7 +4,7 @@
 **/
 var unitList = argument0;
 var size = ds_list_size(unitList);
-var returnArray;
+var returnMap = ds_map_create();
 for(var i = 0;i<size;i=i+1){
     var unitStr = unitList[|i];
     unitData = scr_splitToList(unitStr,",");
@@ -14,6 +14,7 @@ for(var i = 0;i<size;i=i+1){
     var xPosition = scr_changeIndex(xIndex,global.mapWidth,global.mapWidth);
     var yPosition = scr_changeIndex(yIndex,global.mapWidth,global.mapWidth);
     var instance = instance_create(xPosition,yPosition,obj);
-    returnArray[xIndex,yIndex]=instance;
+    var key = scr_getIndexKey(xIndex,yIndex);
+    returnMap[? key]=instance;
 }
-return returnArray;
+return returnMap;

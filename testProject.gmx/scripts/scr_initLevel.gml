@@ -47,11 +47,11 @@ ds_list_read(unitStrList,unitStr);
 
 var mapGrid = scr_createInstanceGrid(grid);
 var buildArray = scr_createBuildArray(buildStrList);
-var unitArray = scr_createUnitArray(unitStrList);
+var unitMap = scr_createUnitMap(unitStrList);
 
 ds_map_add(global.instanceMap,"mapGrid",mapGrid);
 ds_map_add(global.instanceMap,"buildArray",buildArray);
-ds_map_add(global.instanceMap,"unitArray",unitArray);
+ds_map_add(global.instanceMap,"unitMap",unitMap);
 
 
 
@@ -59,3 +59,6 @@ ds_map_add(global.instanceMap,"unitArray",unitArray);
 
 var select = instance_create(32,32,select_obj);
 ds_map_add(global.instanceMap,"select",select);
+
+var debug = instance_create(0,0,debug_obj);
+ds_map_add(global.instanceMap,"debug",debug);

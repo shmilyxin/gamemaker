@@ -6,4 +6,5 @@ var select = argument1;
 unit.selected = 1;
 unit.image_index= 3;
 select.mode = 1;
-var movePoint = unit.movePoint;
+select.actionUnit = unit;
+scr_initUnitRoute(unit,select);

@@ -116,7 +116,7 @@
       <script>scripts\scr_createBuildArray.gml</script>
       <script>scripts\scr_moveView.gml</script>
       <script>scripts\scr_initLevel.gml</script>
-      <script>scripts\scr_createUnitArray.gml</script>
+      <script>scripts\scr_createUnitMap.gml</script>
     </scripts>
     <scripts name="utils">
       <script>scripts\scr_splitToGrid.gml</script>
@@ -126,6 +126,11 @@
       <script>scripts\scr_createLevelMap.gml</script>
       <script>scripts\scr_changeIndex.gml</script>
       <script>scripts\scr_posToIndex.gml</script>
+      <script>scripts\scr_getIndex.gml</script>
+      <scripts name="debug">
+        <script>scripts\scr_setDebugStr.gml</script>
+      </scripts>
+      <script>scripts\scr_getIndexKey.gml</script>
     </scripts>
     <scripts name="component">
       <scripts name="biankuang">
@@ -148,10 +153,13 @@
         <script>scripts\scr_insertAroundBlock.gml</script>
         <script>scripts\scr_checkTerListContant.gml</script>
         <script>scripts\scr_insertNextBlock.gml</script>
+        <script>scripts\scr_checkSelectMoveAble.gml</script>
       </scripts>
     </scripts>
     <scripts name="unit">
       <script>scripts\scr_unitSelect.gml</script>
+      <script>scripts\scr_initUnitRoute.gml</script>
+      <script>scripts\scr_unitMove.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
