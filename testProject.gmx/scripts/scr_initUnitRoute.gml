@@ -29,6 +29,7 @@ if(ds_list_size(teriList)>0){
         if(!is_undefined(routeMap)){
         var key = string(endPos[0])+"_"+string(endPos[1]);
             ds_map_add(returnMap,key,routeMap);
+            instance_create(block.x,block.y,yinying_obj);
         }else{
             continue;
         }

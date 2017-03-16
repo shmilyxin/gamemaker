@@ -30,5 +30,7 @@
     <frame index="7">images\btn_spt_7.png</frame>
     <frame index="8">images\btn_spt_8.png</frame>
     <frame index="9">images\btn_spt_9.png</frame>
+    <frame index="10">images\btn_spt_10.png</frame>
+    <frame index="11">images\btn_spt_11.png</frame>
   </frames>
 </sprite>

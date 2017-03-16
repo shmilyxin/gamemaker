@@ -3,7 +3,7 @@
   <spriteName>wangzi1_spt</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>1</depth>
+  <depth>0</depth>
   <persistent>0</persistent>
   <parentName>abstractUnit_obj</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>event_inherited();
 camp = 0;
-movePoint = 5;
+movePoint = 7;
 </string>
           </argument>
         </arguments>

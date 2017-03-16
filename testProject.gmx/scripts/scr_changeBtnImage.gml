@@ -22,6 +22,9 @@ if(idArg.state == 0){
     case 4:
       idArg.image_index = 8; 
       break;
+    case 5:
+      idArg.image_index = 10; 
+      break;
     }
     if(idArg.index == 1){
         idArg.image_index+=1;

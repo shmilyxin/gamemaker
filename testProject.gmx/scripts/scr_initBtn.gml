@@ -8,7 +8,7 @@ var biankuang = argument0;
 var btnIdList = argument1;
 var btnTypeList = argument2;
 var idSize = ds_list_size(btnIdList);
-ds_list_clear(biankuang.activeBtnList);
+biankuang.activeBtnList = ds_list_create();
 for(var i = 0 ;i<idSize;i++){
     var index = btnIdList[|i];
     var type = btnTypeList[|i];

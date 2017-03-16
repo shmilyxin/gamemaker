@@ -111,8 +111,35 @@ draw_text(0,60,str3);
 {
     if(isChanging == 0){
         isChanging = 1;
-        scr_biankuangChangeMode(id);
+        
+        var select = global.instanceMap[? 'select'];
+        if(select.mode == 1){
+            if(mode == 1){
+                scr_selectCancel(select);
+                scr_biankuangSelectMode(id);
+            }
+            
+        }
+        if(select.mode ==0){
+            if(mode == 0){
+                var btnIdList = ds_list_create() ;
+                btnIdList[|0] = 0;
+                btnIdList[|1] = 1;
+                btnIdList[|2] = 2;
+                btnIdList[|3] = 3;
+                var btnTypeList = ds_list_create() ;
+                btnTypeList[|0] = 1;
+                btnTypeList[|1] = 2;
+                btnTypeList[|2] = 3;
+                btnTypeList[|3] = 4;
+                scr_biankuangBtnMode(id,btnIdList,btnIdList);
+            }else{
+                scr_biankuangSelectMode(id);
+            }   
+            
+        }
     }
+    
 }
 if keyboard_check(ord('J'))
 {

@@ -31,6 +31,7 @@
     2 ：募集按钮
     3 ：结束按钮
     4 ：其他按钮
+    5 : 决定按钮
     state
     0 : 背面
     1 ：背转正侧面
@@ -68,12 +69,12 @@ selected = 0; //是否被选中 0为否 1为是
             <kind>1</kind>
             <string>if (state==0){
     scr_changeBtnImage(id);
-    alarm[0]=5;
+    id.alarm[0]=5;
 }else if (state == 1){
     scr_changeBtnImage(id);
 }else if(state == 2){
     scr_changeBtnImage(id);
-    alarm[0]=5;
+    id.alarm[0]=5;
 }else if(state == 3){
     scr_changeBtnImage(id);
 }
