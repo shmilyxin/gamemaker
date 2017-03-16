@@ -12,10 +12,8 @@ var routeMap = map[? key];
 if(!is_undefined(routeMap)){
     var routeList = routeMap[? "routeList"];
     var size = ds_list_size(routeList);
-    for(var i = 0; i<size;i++){
-         var block = routeList[|i];
-         with(unit){
-            move_towards_point(block.x,block.y,5);
-         }
-    }
+    unit.routeList = routeList;
+    unit.nextIndex = 0;
+    unit.nextBlock = routeList[|unit.nextIndex];
+    unit.alarm[0]=1;
 }
