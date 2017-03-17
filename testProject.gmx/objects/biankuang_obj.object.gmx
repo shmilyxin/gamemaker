@@ -119,8 +119,7 @@ draw_text(0,60,str3);
                 scr_biankuangSelectMode(id);
             }
             
-        }
-        if(select.mode ==0){
+        }else if(select.mode ==0){
             if(mode == 0){
                 var btnIdList = ds_list_create() ;
                 btnIdList[|0] = 0;
@@ -132,7 +131,7 @@ draw_text(0,60,str3);
                 btnTypeList[|1] = 2;
                 btnTypeList[|2] = 3;
                 btnTypeList[|3] = 4;
-                scr_biankuangBtnMode(id,btnIdList,btnIdList);
+                scr_biankuangBtnMode(id,btnIdList,btnTypeList);
             }else{
                 scr_biankuangSelectMode(id);
             }   
@@ -159,7 +158,7 @@ if keyboard_check(ord('J'))
             scr_unitMove(select);
         }
     }else if(mode == 1){
-       
+       scr_btnClick(selectedBtn);
     }
 }
 if keyboard_check(ord('D'))

@@ -54,8 +54,7 @@ routeList = undefined;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_setDebugStr(string(x)+";"+string(y),string(nextBlock.x)+";"+string(nextBlock.y),string(nextIndex));
-if(point_distance(x, y, nextBlock.x, nextBlock.y)&gt;4){
+            <string>if(point_distance(x, y, nextBlock.x, nextBlock.y)&gt;4){
     move_towards_point(nextBlock.x, nextBlock.y,4);
     alarm[0]=1;
 }else{

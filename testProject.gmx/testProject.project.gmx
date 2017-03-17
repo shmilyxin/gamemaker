@@ -130,6 +130,7 @@
       <script>scripts\scr_getIndex.gml</script>
       <scripts name="debug">
         <script>scripts\scr_setDebugStr.gml</script>
+        <script>scripts\scr_getDebugStr.gml</script>
       </scripts>
       <script>scripts\scr_getIndexKey.gml</script>
     </scripts>
@@ -138,6 +139,7 @@
         <script>scripts\scr_changeBtnSelect.gml</script>
         <script>scripts\scr_biankuangBtnMode.gml</script>
         <script>scripts\scr_biankuangSelectMode.gml</script>
+        <script>scripts\scr_btnClick.gml</script>
       </scripts>
       <scripts name="button">
         <script>scripts\scr_closeBtn.gml</script>
