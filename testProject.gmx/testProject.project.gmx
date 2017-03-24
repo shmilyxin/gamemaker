@@ -138,6 +138,9 @@
       </scripts>
       <script>scripts\scr_getIndexKey.gml</script>
       <script>scripts\scr_changeIndexToPos.gml</script>
+      <script>scripts\scr_deepCopy.gml</script>
+      <script>scripts\scr_arrayToStr.gml</script>
+      <script>scripts\scr_splitToArray.gml</script>
     </scripts>
     <scripts name="component">
       <scripts name="biankuang">
@@ -164,6 +167,7 @@
         <script>scripts\scr_checkTerListContant.gml</script>
         <script>scripts\scr_insertNextBlock.gml</script>
         <script>scripts\scr_checkSelectMoveAble.gml</script>
+        <script>scripts\scr_releaseRouteInfoMap.gml</script>
       </scripts>
     </scripts>
     <scripts name="unit">

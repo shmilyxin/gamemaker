@@ -11,8 +11,9 @@ var yMax = ds_grid_height(mapGrid);
 var totalCost = minCostMap[? 'totalCost'];
 var minRouteListSize = ds_list_size(minRouteList);
 var lastPoint = minRouteList[|minRouteListSize-1];
-var xIndex = lastPoint[0];
-var yIndex = lastPoint[1];
+var indexList = scr_splitToList(lastPoint,";");
+var xIndex = real(indexList[|0]);
+var yIndex = real(indexList[|1]);
 
 if(yIndex>0){
     var newX = xIndex;
@@ -53,6 +54,7 @@ if(xIndex<xMax-1){
         ds_list_add(allRouteMapList,routeInfoMap);
     }
 }
-ds_map_destroy(minCostMap);
+ds_list_destroy(indexList);
+
 
 

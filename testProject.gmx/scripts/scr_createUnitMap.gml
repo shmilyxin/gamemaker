@@ -1,6 +1,6 @@
 /**
 根据单位标识生成单位实例
-返回实例二维数组
+返回实例map
 **/
 var unitList = argument0;
 var size = ds_list_size(unitList);

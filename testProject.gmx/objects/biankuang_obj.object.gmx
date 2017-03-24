@@ -174,7 +174,7 @@ if keyboard_check(ord('A'))
     }
 }
 if keyboard_check(ord('M')){
-    scr_testListDestory();
+    scr_testRoute();
 }
 </string>
           </argument>

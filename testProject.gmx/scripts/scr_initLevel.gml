@@ -51,7 +51,7 @@ var unitMap = scr_createUnitMap(unitStrList);
 
 ds_map_add(global.instanceMap,"mapGrid",mapGrid);
 ds_map_add(global.instanceMap,"buildArray",buildArray);
-ds_map_add(global.instanceMap,"unitMap",unitMap);
+ds_map_add_map(global.instanceMap,"unitMap",unitMap);
 
 
 
