@@ -135,6 +135,7 @@
         <script>scripts\scr_clearDebugStr.gml</script>
         <script>scripts\scr_testRoute.gml</script>
         <script>scripts\scr_testListDestory.gml</script>
+        <script>scripts\scr_testMapDestroy.gml</script>
       </scripts>
       <script>scripts\scr_getIndexKey.gml</script>
       <script>scripts\scr_changeIndexToPos.gml</script>

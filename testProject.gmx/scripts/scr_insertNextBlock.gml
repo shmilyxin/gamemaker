@@ -22,6 +22,9 @@ if(maxCost>=cost&&!scr_checkTerListContant(routeList,blockStr)){
   //  instance_create(nextBlockX,nextBlockY,yinying_obj);//测试代码 需删除
     
     return routeInfoMap;
+}else{
+    ds_list_destroy(routeList);
+    ds_map_destroy(routeInfoMap);  
 }
 
 return undefined;

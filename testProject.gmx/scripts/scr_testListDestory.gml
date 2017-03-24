@@ -14,7 +14,12 @@ for(var i = 0;i<10000;i++){
     ds_map_add_list(map,"list",list);
     ds_list_add(testList,map);
 }
+for(var i = 1000;i<3000;i++){
+ var destoryMap = scr_testMapDestroy(testList,i);
+ ds_map_destroy(destoryMap);
+}
 var keyMap = testList[|5];
+ds_list_delete(testList,5);
 testCopyMap[?"key"]= keyMap[?"key"];
 
 var returnList = ds_list_create();
@@ -36,4 +41,5 @@ var endTime = current_time;
 var returnListTemp = testCopyMap[? "list"];
 var returnArrayTemp = returnListTemp[|0];
 scr_addDebugStr(string(endTime - startTime)+":"+string(testCopyMap[? "key"])+":"+string(returnArrayTemp),3);
+ds_map_destroy(testCopyMap);
 
