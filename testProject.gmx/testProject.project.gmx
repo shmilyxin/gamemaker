@@ -131,8 +131,13 @@
       <scripts name="debug">
         <script>scripts\scr_setDebugStr.gml</script>
         <script>scripts\scr_getDebugStr.gml</script>
+        <script>scripts\scr_addDebugStr.gml</script>
+        <script>scripts\scr_clearDebugStr.gml</script>
+        <script>scripts\scr_testRoute.gml</script>
+        <script>scripts\scr_testListDestory.gml</script>
       </scripts>
       <script>scripts\scr_getIndexKey.gml</script>
+      <script>scripts\scr_changeIndexToPos.gml</script>
     </scripts>
     <scripts name="component">
       <scripts name="biankuang">

@@ -12,17 +12,16 @@ var height = ds_grid_height(mapGrid);
 var teriList = ds_list_create();
 for(var j = 0;j<height;j=j+1){
     for(var i = 0;i<width;i=i+1){
-        if(abs(i-unitXIndex)+abs(j-unitYIndex)<maxPoint){
+        if(abs(i-unitXIndex)+abs(j-unitYIndex)<=maxPoint){
            ds_list_add(teriList,mapGrid[# i,j]); 
         }
     }
 }
-
 var returnMap = ds_map_create();
+scr_clearDebugStr();
 if(ds_list_size(teriList)>0){
     for(var i = 0;i<ds_list_size(teriList);i++){
-        var block = teriList[|i];
-        
+        var block = teriList[|i]; 
         var startPos = scr_getIndex(unit.x,unit.y);
         var endPos = scr_getIndex(block.x,block.y);
         var routeMap = scr_getRoute(mapGrid,startPos,endPos,unit.movePoint);
@@ -35,4 +34,5 @@ if(ds_list_size(teriList)>0){
         }
     }
 }
+ds_list_destroy(teriList);
 select.actionMap = returnMap;

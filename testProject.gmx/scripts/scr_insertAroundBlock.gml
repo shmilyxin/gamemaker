@@ -4,20 +4,21 @@
 var allRouteMapList = argument0;
 var minCostMap =argument1;
 var mapGrid =argument2;
+var maxCost =argument3;
 var minRouteList = minCostMap[? 'routeList'];
 var xMax = ds_grid_width(mapGrid);
 var yMax = ds_grid_height(mapGrid);
 var totalCost = minCostMap[? 'totalCost'];
 var minRouteListSize = ds_list_size(minRouteList);
 var lastPoint = minRouteList[|minRouteListSize-1];
-var xIndex = lastPoint.xIndex;
-var yIndex = lastPoint.yIndex;
+var xIndex = lastPoint[0];
+var yIndex = lastPoint[1];
 
 if(yIndex>0){
     var newX = xIndex;
     var newY = yIndex-1;
     var blockUp = mapGrid[# newX,newY];
-    var routeInfoMap = scr_insertNextBlock(blockUp,minRouteList,totalCost);
+    var routeInfoMap = scr_insertNextBlock(blockUp,minRouteList,totalCost,maxCost);
     if(!is_undefined(routeInfoMap)){
         ds_list_add(allRouteMapList,routeInfoMap);
     }
@@ -26,7 +27,7 @@ if(yIndex<yMax-1){
     var newX = xIndex;
     var newY = yIndex+1;
     var blockDown = mapGrid[# newX,newY];
-    var routeInfoMap = scr_insertNextBlock(blockDown,minRouteList,totalCost);
+    var routeInfoMap = scr_insertNextBlock(blockDown,minRouteList,totalCost,maxCost);
     if(!is_undefined(routeInfoMap)){
 
         ds_list_add(allRouteMapList,routeInfoMap);
@@ -36,7 +37,7 @@ if(xIndex>0){
     var newX = xIndex-1;
     var newY = yIndex;
     var blockLeft = mapGrid[# newX,newY];
-    var routeInfoMap = scr_insertNextBlock(blockLeft,minRouteList,totalCost);
+    var routeInfoMap = scr_insertNextBlock(blockLeft,minRouteList,totalCost,maxCost);
     if(!is_undefined(routeInfoMap)){
 
         ds_list_add(allRouteMapList,routeInfoMap);
@@ -46,11 +47,12 @@ if(xIndex<xMax-1){
     var newX = xIndex+1;
     var newY = yIndex;
     var blockRight = mapGrid[# newX,newY];
-    var routeInfoMap = scr_insertNextBlock(blockRight,minRouteList,totalCost);
+    var routeInfoMap = scr_insertNextBlock(blockRight,minRouteList,totalCost,maxCost);
     if(!is_undefined(routeInfoMap)){
 
         ds_list_add(allRouteMapList,routeInfoMap);
     }
 }
+ds_map_destroy(minCostMap);
 
 

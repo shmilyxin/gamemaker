@@ -16,4 +16,5 @@ for(var i = 0;i<size;i=i+1){
     var instance = instance_create(xPosition,yPosition,obj);
     returnArray[xIndex,yIndex]=instance;
 }
+ds_list_destroy(buildList);
 return returnArray;

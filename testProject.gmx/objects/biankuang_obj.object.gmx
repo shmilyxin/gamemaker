@@ -173,6 +173,9 @@ if keyboard_check(ord('A'))
        scr_changeBtnSelect(id,1);
     }
 }
+if keyboard_check(ord('M')){
+    scr_testListDestory();
+}
 </string>
           </argument>
         </arguments>

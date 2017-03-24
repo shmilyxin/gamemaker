@@ -25,9 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>str = "";
-str1 = "";
-str2 = "";
+            <string>strList = ds_list_create();
 </string>
           </argument>
         </arguments>
@@ -52,9 +50,13 @@ str2 = "";
             <kind>1</kind>
             <string>
 draw_set_colour(c_white);
-draw_text(0,0,str);
-draw_text(0,20,str1);
-draw_text(0,40,str2);
+var size = ds_list_size(strList);
+if(size&gt;0){
+    for(var i = 0;i&lt;size;i++){
+        draw_text(0,i*20,strList[|i]);
+    }
+}
+
 
 </string>
           </argument>

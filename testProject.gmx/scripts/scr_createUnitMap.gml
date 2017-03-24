@@ -17,4 +17,5 @@ for(var i = 0;i<size;i=i+1){
     var key = scr_getIndexKey(xIndex,yIndex);
     returnMap[? key]=instance;
 }
+ds_list_destroy(unitList);
 return returnMap;

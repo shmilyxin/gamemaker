@@ -24,4 +24,5 @@ for(var i = 0;i<height;i=i+1){
         ds_grid_add(returnGrid,j,i,instance);
     }
 }
+ds_grid_destroy(grid);
 return returnGrid;

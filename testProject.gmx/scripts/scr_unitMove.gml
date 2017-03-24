@@ -7,7 +7,7 @@ var map = select.actionMap;
 var index = scr_getIndex(select.x,select.y);
 var xIndex = index[0];
 var yIndex = index[1];
-var key = string(xIndex)+"_"+string(yIndex);
+var key = scr_getIndexKey(xIndex,yIndex);
 var routeMap = map[? key];
 if(!is_undefined(routeMap)){
     var routeList = routeMap[? "routeList"];

@@ -3,7 +3,7 @@ var xPos = argument1;
 var yPos = argument2;
 if(select.mode==1&&!is_undefined(select.actionUnit)&&!is_undefined(select.actionMap)){
     var index = scr_getIndex(xPos,yPos);
-    var key = string(index[0])+"_"+string(index[1]);
+    var key = scr_getIndexKey(index[0],index[1]);
     if(ds_map_exists(select.actionMap, key)){
         return true;
     }else{
