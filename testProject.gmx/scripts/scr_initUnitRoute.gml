@@ -18,12 +18,14 @@ for(var j = 0;j<height;j=j+1){
     }
 }
 var returnMap = ds_map_create();
-scr_clearDebugStr();
+
+
 if(ds_list_size(teriList)>0){
     for(var i = 0;i<ds_list_size(teriList);i++){
         var block = teriList[|i]; 
         var startPos = scr_getIndex(unit.x,unit.y);
         var endPos = scr_getIndex(block.x,block.y);
+        
         var routeMap = scr_getRoute(mapGrid,startPos,endPos,unit.movePoint);
         if(!is_undefined(routeMap)){
         var key = string(endPos[0])+"_"+string(endPos[1]);
@@ -34,5 +36,7 @@ if(ds_list_size(teriList)>0){
         }
     }
 }
+
+
 ds_list_destroy(teriList);
 select.actionMap = returnMap;

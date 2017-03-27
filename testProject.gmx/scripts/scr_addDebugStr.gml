@@ -11,6 +11,7 @@ if(size>0){
     }else{
         ds_list_add(debug.strList,debugStr);
     }
+    ds_list_destroy(strList);
 }else{
     ds_list_add(debug.strList,debugStr);
 }

@@ -3,11 +3,15 @@
 
 var allRouteMapList =argument0;
 var minCostIndex =0;
+var minCost = 999;
 for(var i=0;i<ds_list_size(allRouteMapList);i++){
-    var minMap = allRouteMapList[|minCostIndex];
     var thisMap = allRouteMapList[|i];
-    if(thisMap[? 'totalCost']<=minMap[? 'totalCost']){
+    var thisTotalCost = thisMap[? 'totalCost'];
+    var thisDistance = thisMap[? 'distance'];
+    var thisCost = thisTotalCost + thisDistance;
+    if(thisCost<=minCost){
         minCostIndex = i;
+        minCost=thisCost;
     }
 }
 var minCostMap = allRouteMapList[|minCostIndex];

@@ -26,32 +26,32 @@ var endStr = scr_arrayToStr(endIndex,2,";");
 var allRouteMapList = ds_list_create();
 var routeInfoMap = ds_map_create();
 var routeList = ds_list_create();
+var distance = abs(startIndex[0]-endIndex[0])+abs(startIndex[1]-endIndex[1]);
 ds_list_add(routeList,startStr);
 ds_map_add_list(routeInfoMap,'routeList',routeList);
 ds_map_add(routeInfoMap,'totalCost',0);
+ds_map_add(routeInfoMap,'distance',distance);
 ds_list_add(allRouteMapList,routeInfoMap);
 
-var count = 0;
 var returnMap = undefined;
-var startTime = current_time;
-while(true){
-    count+=1;
-    
+while(true){   
+
     var minCostMap = scr_getMinCostMap(allRouteMapList);
     if(is_undefined(minCostMap)||minCostMap[? 'totalCost']>maxCost){
        returnMap = undefined;
        break;
     }
-    var minRouteList = minCostMap[? 'routeList'];
-    var minRouteListSize = ds_list_size(minRouteList);
-    var lastPoint = minRouteList[|minRouteListSize-1];
-    if(lastPoint==endStr){
+    if(minCostMap[? 'distance']==0){
         returnMap = minCostMap;
         break;
     }
-    scr_insertAroundBlock(allRouteMapList,minCostMap,mapGrid,maxCost);
-    ds_list_destroy(minRouteList);
+    var endRouteMap = scr_insertAroundBlock(allRouteMapList,minCostMap,mapGrid,endIndex);
     ds_map_destroy(minCostMap);
+    if(!is_undefined(endRouteMap)&&endRouteMap[? 'totalCost']<=maxCost){
+       returnMap = endRouteMap;
+       break;
+    }
+    
 }
 //释放内存
 for(var i = 0;i<ds_list_size(allRouteMapList);i++){
@@ -60,5 +60,5 @@ for(var i = 0;i<ds_list_size(allRouteMapList);i++){
 }
 ds_list_destroy(allRouteMapList);
 var endTime = current_time;
-scr_addDebugStr(string(endIndex[0])+"_"+string(endIndex[1])+":"+string(count)+":"+string(endTime - startTime),3); 
+
 return returnMap;
