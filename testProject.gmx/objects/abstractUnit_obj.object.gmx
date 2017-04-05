@@ -32,6 +32,7 @@ camp = 0; //阵营 0 为光明方 1 为黑暗方
 movePoint = 0;
 moving = 0;
 routeList = undefined;
+key="";
 </string>
           </argument>
         </arguments>

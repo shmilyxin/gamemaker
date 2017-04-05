@@ -109,75 +109,76 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="map">
-      <script>scripts\scr_getTerObjByKey.gml</script>
-      <script>scripts\scr_getBuildObjByKey.gml</script>
-      <script>scripts\scr_getUnitObjByKey.gml</script>
-      <script>scripts\scr_readMap.gml</script>
-      <script>scripts\scr_createInstanceGrid.gml</script>
       <script>scripts\scr_createBuildArray.gml</script>
-      <script>scripts\scr_moveView.gml</script>
-      <script>scripts\scr_initLevel.gml</script>
+      <script>scripts\scr_createInstanceGrid.gml</script>
       <script>scripts\scr_createUnitMap.gml</script>
+      <script>scripts\scr_getBuildObjByKey.gml</script>
+      <script>scripts\scr_getTerObjByKey.gml</script>
+      <script>scripts\scr_getUnitObjByKey.gml</script>
+      <script>scripts\scr_initLevel.gml</script>
+      <script>scripts\scr_moveView.gml</script>
+      <script>scripts\scr_readMap.gml</script>
     </scripts>
     <scripts name="utils">
-      <script>scripts\scr_splitToGrid.gml</script>
-      <script>scripts\scr_splitToList.gml</script>
-      <script>scripts\scr_defGlobal.gml</script>
-      <script>scripts\scr_anyc_step.gml</script>
-      <script>scripts\scr_createLevelMap.gml</script>
-      <script>scripts\scr_changeIndex.gml</script>
-      <script>scripts\scr_posToIndex.gml</script>
-      <script>scripts\scr_getIndex.gml</script>
       <scripts name="debug">
-        <script>scripts\scr_setDebugStr.gml</script>
-        <script>scripts\scr_getDebugStr.gml</script>
         <script>scripts\scr_addDebugStr.gml</script>
         <script>scripts\scr_clearDebugStr.gml</script>
-        <script>scripts\scr_testRoute.gml</script>
+        <script>scripts\scr_getDebugStr.gml</script>
+        <script>scripts\scr_setDebugStr.gml</script>
+        <script>scripts\scr_showDebugStr.gml</script>
         <script>scripts\scr_testListDestory.gml</script>
         <script>scripts\scr_testMapDestroy.gml</script>
-        <script>scripts\scr_showDebugStr.gml</script>
+        <script>scripts\scr_testRoute.gml</script>
       </scripts>
-      <script>scripts\scr_getIndexKey.gml</script>
-      <script>scripts\scr_changeIndexToPos.gml</script>
-      <script>scripts\scr_deepCopy.gml</script>
+      <script>scripts\scr_anyc_step.gml</script>
       <script>scripts\scr_arrayToStr.gml</script>
+      <script>scripts\scr_changeIndex.gml</script>
+      <script>scripts\scr_changeIndexToPos.gml</script>
+      <script>scripts\scr_createLevelMap.gml</script>
+      <script>scripts\scr_deepCopy.gml</script>
+      <script>scripts\scr_defGlobal.gml</script>
+      <script>scripts\scr_getIndex.gml</script>
+      <script>scripts\scr_getIndexKey.gml</script>
+      <script>scripts\scr_posToIndex.gml</script>
       <script>scripts\scr_splitToArray.gml</script>
+      <script>scripts\scr_splitToGrid.gml</script>
+      <script>scripts\scr_splitToList.gml</script>
     </scripts>
     <scripts name="component">
       <scripts name="biankuang">
-        <script>scripts\scr_changeBtnSelect.gml</script>
         <script>scripts\scr_biankuangBtnMode.gml</script>
         <script>scripts\scr_biankuangSelectMode.gml</script>
         <script>scripts\scr_btnClick.gml</script>
+        <script>scripts\scr_changeBtnSelect.gml</script>
       </scripts>
       <scripts name="button">
-        <script>scripts\scr_closeBtn.gml</script>
-        <script>scripts\scr_changeBtnSelected.gml</script>
         <script>scripts\scr_changeBtnImage.gml</script>
+        <script>scripts\scr_changeBtnSelected.gml</script>
+        <script>scripts\scr_closeBtn.gml</script>
         <script>scripts\scr_initBtn.gml</script>
       </scripts>
       <scripts name="select">
-        <script>scripts\scr_stopSelect.gml</script>
-        <script>scripts\scr_getSelectMovePos.gml</script>
-        <script>scripts\scr_startSelect.gml</script>
-        <script>scripts\scr_getSelectIndex.gml</script>
-        <script>scripts\scr_getRoute.gml</script>
-        <script>scripts\scr_getMinCostMap.gml</script>
-        <script>scripts\scr_insertAroundBlock.gml</script>
-        <script>scripts\scr_selectCancel.gml</script>
-        <script>scripts\scr_checkTerListContant.gml</script>
-        <script>scripts\scr_insertNextBlock.gml</script>
         <script>scripts\scr_checkSelectMoveAble.gml</script>
+        <script>scripts\scr_checkTerListContant.gml</script>
+        <script>scripts\scr_getMinCostMap.gml</script>
+        <script>scripts\scr_getRoute.gml</script>
+        <script>scripts\scr_getSelectIndex.gml</script>
+        <script>scripts\scr_getSelectMovePos.gml</script>
+        <script>scripts\scr_insertAroundBlock.gml</script>
+        <script>scripts\scr_insertNextBlock.gml</script>
         <script>scripts\scr_releaseRouteInfoMap.gml</script>
+        <script>scripts\scr_selectCancel.gml</script>
+        <script>scripts\scr_startSelect.gml</script>
+        <script>scripts\scr_stopSelect.gml</script>
       </scripts>
     </scripts>
     <scripts name="unit">
-      <script>scripts\scr_unitSelect.gml</script>
-      <script>scripts\scr_initUnitRoute.gml</script>
-      <script>scripts\scr_unitMove.gml</script>
       <script>scripts\scr_initUnitBtn.gml</script>
+      <script>scripts\scr_initUnitRoute.gml</script>
       <script>scripts\scr_unitCancelSelect.gml</script>
+      <script>scripts\scr_unitDecide.gml</script>
+      <script>scripts\scr_unitMove.gml</script>
+      <script>scripts\scr_unitSelect.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">

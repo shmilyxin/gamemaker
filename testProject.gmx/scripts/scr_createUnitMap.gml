@@ -15,6 +15,7 @@ for(var i = 0;i<size;i=i+1){
     var yPosition = scr_changeIndex(yIndex,global.mapWidth,global.mapWidth);
     var instance = instance_create(xPosition,yPosition,obj);
     var key = scr_getIndexKey(xIndex,yIndex);
+    instance.key = key;
     returnMap[? key]=instance;
 }
 ds_list_destroy(unitList);

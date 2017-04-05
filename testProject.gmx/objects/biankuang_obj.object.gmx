@@ -114,9 +114,12 @@ draw_text(0,60,str3);
         
         var select = global.instanceMap[? 'select'];
         if(select.mode == 1){
-            if(mode == 1){
-                scr_selectCancel(select);
+            scr_unitCancelSelect(select);
+            scr_selectCancel(select);
+            if(mode == 1){  
                 scr_biankuangSelectMode(id);
+            }else{
+                
             }
             
         }else if(select.mode ==0){
