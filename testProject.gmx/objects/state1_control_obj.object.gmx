@@ -50,9 +50,9 @@ scr_initLevel(1);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>timer = timer+1;
-if(timer=600){
-    timer = 0;
+            <string>global.timer = global.timer+1;
+if(global.timer=600){
+    global.timer = 0;
 }
 </string>
           </argument>

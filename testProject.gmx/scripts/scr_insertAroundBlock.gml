@@ -22,6 +22,7 @@ if(yIndex>0){
     var routeInfoMap = scr_insertNextBlock(blockUp,minRouteList,totalCost,endIndex);
     if(!is_undefined(routeInfoMap)){
         if(routeInfoMap[? 'distance']==0){
+            ds_list_destroy(indexList);
             return routeInfoMap;
         }else{
             ds_list_add(allRouteMapList,routeInfoMap);
@@ -35,6 +36,7 @@ if(yIndex<yMax-1){
     var routeInfoMap = scr_insertNextBlock(blockDown,minRouteList,totalCost,endIndex);
    if(!is_undefined(routeInfoMap)){
         if(routeInfoMap[? 'distance']==0){
+            ds_list_destroy(indexList);
             return routeInfoMap;
         }else{
             ds_list_add(allRouteMapList,routeInfoMap);
@@ -48,6 +50,7 @@ if(xIndex>0){
     var routeInfoMap = scr_insertNextBlock(blockLeft,minRouteList,totalCost,endIndex);
     if(!is_undefined(routeInfoMap)){
         if(routeInfoMap[? 'distance']==0){
+            ds_list_destroy(indexList);
             return routeInfoMap;
         }else{
             ds_list_add(allRouteMapList,routeInfoMap);
@@ -61,6 +64,7 @@ if(xIndex<xMax-1){
     var routeInfoMap = scr_insertNextBlock(blockRight,minRouteList,totalCost,endIndex);
     if(!is_undefined(routeInfoMap)){
         if(routeInfoMap[? 'distance']==0){
+            ds_list_destroy(indexList);
             return routeInfoMap;
         }else{
             ds_list_add(allRouteMapList,routeInfoMap);

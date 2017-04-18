@@ -64,6 +64,8 @@ if(point_distance(x, y, nextBlockX, nextBlockY)&gt;4){
     alarm[0]=1;
 }else{
     var size = ds_list_size(routeList);
+    x = nextBlockX;
+    y = nextBlockY;
     if(nextIndex&lt;size-1){
         nextIndex+=1;
         nextBlock = routeList[|nextIndex];
@@ -71,9 +73,9 @@ if(point_distance(x, y, nextBlockX, nextBlockY)&gt;4){
     }else{
         speed = 0;
         scr_initUnitBtn(id);
+        
     }
-    x = floor(x);
-    y = floor(y);
+  
 }
 </string>
           </argument>

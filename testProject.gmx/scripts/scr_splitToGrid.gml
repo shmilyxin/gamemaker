@@ -5,7 +5,7 @@ argument1 鐢ㄦ潵鍒嗛殧grid瀹藉害楂樺害鍜屾暟鎹殑鍒嗛殧绗
 argument2 鐢ㄦ潵鍒嗛殧grid鏁版嵁鐨勫垎闅旂
 **/
 var str = argument0;
-var grid = null;
+var grid = undefined;
 var splitOut = argument1;
 var splitInside = argument2;
 if(str!=""){

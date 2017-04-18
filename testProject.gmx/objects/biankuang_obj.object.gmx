@@ -30,8 +30,8 @@ mode = 0;//面板操作模式 0 代表当前操作地图 1代表当前操作面�
 isChanging = 0;
 allBtnList = ds_list_create();
 activeBtnList = ds_list_create();
-stateControl = null;
-selectedBtn = null;
+stateControl = undefined;
+selectedBtn = undefined;
 </string>
           </argument>
         </arguments>
@@ -177,7 +177,11 @@ if keyboard_check(ord('A'))
     }
 }
 if keyboard_check(ord('M')){
+    scr_clearDebugStr();
+    var startTime = current_time;
     scr_testRoute();
+    var endTime = current_time;
+    scr_addDebugStr(string(endTime-startTime),3)
 }
 </string>
           </argument>

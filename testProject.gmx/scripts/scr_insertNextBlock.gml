@@ -19,10 +19,6 @@ if(!scr_checkTerListContant(routeList,blockStr)){
     ds_map_add(routeInfoMap,'totalCost',cost);
     var distance = abs(blockIndex[0]-endIndex[0])+abs(blockIndex[1]-endIndex[1]);
     ds_map_add(routeInfoMap,'distance',distance);
-   // var nextBlockX = scr_changeIndex(blockIndex[0],global.mapWidth,global.mapWidth);
-  //  var nextBlockY = scr_changeIndex(blockIndex[1],global.mapWidth,global.mapWidth);
-  //  instance_create(nextBlockX,nextBlockY,yinying_obj);//测试代码 需删除
-    
     return routeInfoMap;
 }else{
     ds_list_destroy(routeList);

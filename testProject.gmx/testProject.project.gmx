@@ -129,6 +129,8 @@
         <script>scripts\scr_testListDestory.gml</script>
         <script>scripts\scr_testMapDestroy.gml</script>
         <script>scripts\scr_testRoute.gml</script>
+        <script>scripts\scr_addTestMap.gml</script>
+        <script>scripts\scr_testScript.gml</script>
       </scripts>
       <script>scripts\scr_anyc_step.gml</script>
       <script>scripts\scr_arrayToStr.gml</script>
@@ -158,9 +160,9 @@
         <script>scripts\scr_initBtn.gml</script>
       </scripts>
       <scripts name="select">
+        <script>scripts\scr_getMinCostMap.gml</script>
         <script>scripts\scr_checkSelectMoveAble.gml</script>
         <script>scripts\scr_checkTerListContant.gml</script>
-        <script>scripts\scr_getMinCostMap.gml</script>
         <script>scripts\scr_getRoute.gml</script>
         <script>scripts\scr_getSelectIndex.gml</script>
         <script>scripts\scr_getSelectMovePos.gml</script>

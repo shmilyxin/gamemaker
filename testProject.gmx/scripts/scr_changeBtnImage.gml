@@ -39,5 +39,5 @@ if(idArg.state == 0){
     idArg.image_index = 0; 
     biankuang.isChanging = 0;
     idArg.state = 0;
-    biankuang.selectedBtn = null;
+    biankuang.selectedBtn = undefined;
 }
