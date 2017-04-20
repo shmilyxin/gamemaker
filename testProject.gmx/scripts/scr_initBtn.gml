@@ -16,6 +16,6 @@ for(var i = 0 ;i<idSize;i++){
     btn.type = type;
     btn.selected = 0;
     btn.isChanging = 0;
-    btn.alarm[0]=5;
     ds_list_add(biankuang.activeBtnList,btn);
 }
+biankuang.alarm[0]=5;

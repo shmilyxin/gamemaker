@@ -36,6 +36,7 @@ instance_create(178,224,option_obj);
 
 /**
 
+
 //var file = file_text_open_read( working_directory+"/Level/state1");
 //var str = file_text_read_string(file);
 //file_text_close(file);
@@ -61,7 +62,7 @@ var buildList = scr_splitToList(buildStr,";");
 var buildListStr = ds_list_write(buildList);
 ds_map_add(map,"buildList",buildListStr);
 
-var unitStr = "1,8,1"
+var unitStr = "1,8,1;1,5,1"
 var unitList = scr_splitToList(unitStr,";");
 var unitListStr = ds_list_write(unitList);
 ds_map_add(map,"unitList",unitListStr);
@@ -73,7 +74,6 @@ file_text_close(file2);
 show_message(str);
 
 **/
-
 </string>
           </argument>
         </arguments>

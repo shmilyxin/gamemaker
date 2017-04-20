@@ -18,4 +18,5 @@ unit.image_index= 1;
 unit.moving = 0;
 unit.routeList = undefined;
 unit.selected = 0;
+unit.walkImgAlarm = 20;
 

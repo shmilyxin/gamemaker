@@ -25,13 +25,80 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-mode = 0;//面板操作模式 0 代表当前操作地图 1代表当前操作面板
-isChanging = 0;
+            <string>/**
+边框事件操作模式
+0 大地图模式 可执行操作 方向键 上下左右 坐标移动 J 选择单位 K 打开面板 
+1 面板模式 可执行操作 方向键 左右 选择按钮 J 点击按钮 K 关闭面板
+2 单位选择模式 可执行操作 方向键 上下左右 坐标移动 J 选择移动位置 K 取消选择
+3 单位移动模式 可执行操作 K 取消移动
+4 面板模式转换中 可执行操作 无
+
+**/
+enum bkActionMode{
+    selectMode = 0,
+    btnMode = 1,
+    unitSelectMode = 2,
+    unitMoveMode = 3,
+    btnChangeMode = 4
+}
+mode = bkActionMode.selectMode;//面板操作模式 0 代表当前操作地图 1代表当前操作面板
 allBtnList = ds_list_create();
 activeBtnList = ds_list_create();
 stateControl = undefined;
 selectedBtn = undefined;
+btnChangeStep = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(mode = bkActionMode.btnChangeMode){
+    var select = global.instanceMap[? 'select'];
+    var size = ds_list_size(id.activeBtnList);
+    for(var i = 0;i&lt;size;i++){
+        scr_changeBtnImage(id.activeBtnList[|i]);
+    }
+    if(btnChangeStep == 0){
+        btnChangeStep = 1;
+        scr_stopSelect(select);
+        alarm[0]=5;
+    }else if(btnChangeStep = 1){
+        btnChangeStep = 2;
+        var firstBtn = id.activeBtnList[|0];
+        firstBtn.image_index+=1;
+        firstBtn.selected = 1;
+        id.selectedBtn = firstBtn;
+        mode = bkActionMode.btnMode;
+    }else if(btnChangeStep = 2){
+        btnChangeStep = 3;
+        id.selectedBtn = undefined;
+        alarm[0]=5;
+    }else if(btnChangeStep = 3){
+        btnChangeStep = 0;
+        id.selectedBtn = undefined;
+        ds_list_clear(id.activeBtnList);
+        mode = bkActionMode.selectMode;
+        scr_startSelect(select);
+    }
+}
+
 </string>
           </argument>
         </arguments>
@@ -109,45 +176,40 @@ draw_text(0,60,str3);
             <kind>1</kind>
             <string>if keyboard_check(ord('K'))
 {
-    if(isChanging == 0){
-        isChanging = 1;
-        
-        var select = global.instanceMap[? 'select'];
-        if(select.mode == 1){
-            scr_unitCancelSelect(select);
-            scr_selectCancel(select);
-            if(mode == 1){  
-                scr_biankuangSelectMode(id);
-            }else{
-                
-            }
-            
-        }else if(select.mode ==0){
-            if(mode == 0){
-                var btnIdList = ds_list_create() ;
+    switch(mode){
+        case bkActionMode.selectMode: 
+            var btnIdList = ds_list_create() ;
                 btnIdList[|0] = 0;
                 btnIdList[|1] = 1;
                 btnIdList[|2] = 2;
                 btnIdList[|3] = 3;
-                var btnTypeList = ds_list_create() ;
+            var btnTypeList = ds_list_create() ;
                 btnTypeList[|0] = 1;
                 btnTypeList[|1] = 2;
                 btnTypeList[|2] = 3;
                 btnTypeList[|3] = 4;
-                scr_biankuangBtnMode(id,btnIdList,btnTypeList);
-            }else{
-                scr_biankuangSelectMode(id);
-            }   
-            
-        }
+            scr_biankuangBtnMode(id,btnIdList,btnTypeList);
+        break;
+        case bkActionMode.btnMode: 
+            scr_biankuangSelectMode(id);
+        break;
+        case bkActionMode.unitSelectMode: 
+            var select = global.instanceMap[? 'select'];
+            scr_unitCancelSelect(select);
+            scr_selectCancel(select);
+            mode = bkActionMode.selectMode;
+        break;
+        case bkActionMode.unitMoveMode: 
+        
+        break;
     }
     
 }
 if keyboard_check(ord('J'))
 {
-    if(mode == 0){
-        var select = global.instanceMap[? 'select'];
-        if(select.mode == 0){
+    switch(mode){
+        case bkActionMode.selectMode: 
+            var select = global.instanceMap[? 'select'];
             var indexArray = scr_getSelectIndex(select);
             var unitMap = global.instanceMap[? 'unitMap'];
             var key = scr_getIndexKey(indexArray[0],indexArray[1]);
@@ -157,23 +219,34 @@ if keyboard_check(ord('J'))
                  scr_unitSelect(unit,select);
                }
             }
-        }else if(select.mode == 1){
+            mode = bkActionMode.unitSelectMode;
+        break;
+        case bkActionMode.btnMode: 
+            if(!is_undefined(selectedBtn)){
+                scr_btnClick(selectedBtn);
+            }
+        break;
+        case bkActionMode.unitSelectMode: 
+            var select = global.instanceMap[? 'select'];
             scr_unitMove(select);
-        }
-    }else if(mode == 1){
-       scr_btnClick(selectedBtn);
+            mode = bkActionMode.unitMoveMode;
+        break;
     }
 }
 if keyboard_check(ord('D'))
 {
-    if(isChanging == 0&amp;&amp;mode == 1){
-       scr_changeBtnSelect(id,2);
+    switch(mode){
+        case bkActionMode.btnMode:
+            scr_changeBtnSelect(id,2);
+        break;
     }
 }
 if keyboard_check(ord('A'))
 {
-    if(isChanging == 0&amp;&amp;mode == 1){
-       scr_changeBtnSelect(id,1);
+    switch(mode){
+        case bkActionMode.btnMode:
+            scr_changeBtnSelect(id,1);
+        break;
     }
 }
 if keyboard_check(ord('M')){

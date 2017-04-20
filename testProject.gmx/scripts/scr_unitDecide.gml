@@ -1,6 +1,7 @@
 var unit = argument0;
 unit.selected = 0;
 unit.image_index= 0;
+unit.walkImgAlarm = 20;
 var routeList = unit.routeList;
 if(!is_undefined(routeList)){
     ds_list_destroy(routeList);
