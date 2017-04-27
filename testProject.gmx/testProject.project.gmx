@@ -181,6 +181,7 @@
       <script>scripts\scr_unitDecide.gml</script>
       <script>scripts\scr_unitMove.gml</script>
       <script>scripts\scr_unitSelect.gml</script>
+      <script>scripts\scr_replaceUnit.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -232,6 +233,7 @@
   <rooms name="rooms">
     <room>rooms\title_room</room>
     <room>rooms\state1_room</room>
+    <room>rooms\room2</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

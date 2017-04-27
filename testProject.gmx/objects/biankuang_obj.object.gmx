@@ -39,13 +39,16 @@ enum bkActionMode{
     btnMode = 1,
     unitSelectMode = 2,
     unitMoveMode = 3,
-    btnChangeMode = 4
+    btnChangeMode = 4,
+    unitActiveMode = 5
 }
 mode = bkActionMode.selectMode;//面板操作模式 0 代表当前操作地图 1代表当前操作面板
+btnChangeNextMode = undefined;
 allBtnList = ds_list_create();
 activeBtnList = ds_list_create();
 stateControl = undefined;
 selectedBtn = undefined;
+
 btnChangeStep = 0;
 </string>
           </argument>
@@ -85,7 +88,10 @@ btnChangeStep = 0;
         firstBtn.image_index+=1;
         firstBtn.selected = 1;
         id.selectedBtn = firstBtn;
-        mode = bkActionMode.btnMode;
+        if(!is_undefined(id.btnChangeNextMode)){
+            mode = id.btnChangeNextMode;
+            id.btnChangeNextMode = undefined;
+        }
     }else if(btnChangeStep = 2){
         btnChangeStep = 3;
         id.selectedBtn = undefined;
@@ -94,7 +100,10 @@ btnChangeStep = 0;
         btnChangeStep = 0;
         id.selectedBtn = undefined;
         ds_list_clear(id.activeBtnList);
-        mode = bkActionMode.selectMode;
+        if(!is_undefined(id.btnChangeNextMode)){
+            mode = id.btnChangeNextMode;
+            id.btnChangeNextMode = undefined;
+        }
         scr_startSelect(select);
     }
 }
@@ -200,7 +209,15 @@ draw_text(0,60,str3);
             mode = bkActionMode.selectMode;
         break;
         case bkActionMode.unitMoveMode: 
-        
+            
+        break;
+        case bkActionMode.unitActiveMode:
+            var select = global.instanceMap[? 'select'];
+            var unit = select.actionUnit;
+            scr_replaceUnit(unit);
+            mode = bkActionMode.btnChangeMode;
+            btnChangeNextMode = bkActionMode.unitSelectMode;
+            scr_closeBtn(id);
         break;
     }
     
@@ -217,9 +234,9 @@ if keyboard_check(ord('J'))
             if(!is_undefined(unit)){
                if(unit.operated==0){
                  scr_unitSelect(unit,select);
+                 mode = bkActionMode.unitSelectMode;
                }
             }
-            mode = bkActionMode.unitSelectMode;
         break;
         case bkActionMode.btnMode: 
             if(!is_undefined(selectedBtn)){
@@ -231,12 +248,19 @@ if keyboard_check(ord('J'))
             scr_unitMove(select);
             mode = bkActionMode.unitMoveMode;
         break;
+        case bkActionMode.unitActiveMode:
+             if(!is_undefined(selectedBtn)){
+                scr_btnClick(selectedBtn);
+            }
+        break;
+        
     }
 }
 if keyboard_check(ord('D'))
 {
     switch(mode){
         case bkActionMode.btnMode:
+        case bkActionMode.unitActiveMode:
             scr_changeBtnSelect(id,2);
         break;
     }
@@ -245,16 +269,13 @@ if keyboard_check(ord('A'))
 {
     switch(mode){
         case bkActionMode.btnMode:
+        case bkActionMode.unitActiveMode:
             scr_changeBtnSelect(id,1);
         break;
     }
 }
 if keyboard_check(ord('M')){
-    scr_clearDebugStr();
-    var startTime = current_time;
-    scr_testRoute();
-    var endTime = current_time;
-    scr_addDebugStr(string(endTime-startTime),3)
+   
 }
 </string>
           </argument>

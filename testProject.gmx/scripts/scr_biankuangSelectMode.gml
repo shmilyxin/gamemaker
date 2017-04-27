@@ -1,6 +1,7 @@
 var biankuang = argument0;
 biankuang.mode = bkActionMode.btnChangeMode;
-var select = global.instanceMap[? 'select'];
+biankuang.btnChangeNextMode = bkActionMode.selectMode;
 
-scr_closeBtn(id);
+
+scr_closeBtn(biankuang);
 

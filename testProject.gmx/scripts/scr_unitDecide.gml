@@ -1,10 +1,12 @@
 var unit = argument0;
 unit.selected = 0;
-unit.image_index= 0;
-unit.walkImgAlarm = 20;
+unit.image_index= 4;
+unit.operated = 1;
+unit.walkImgAlarm = 0;
 var routeList = unit.routeList;
 if(!is_undefined(routeList)){
     ds_list_destroy(routeList);
+    unit.routeList = undefined;
 }
 unit.routeList = undefined;
 var pos = scr_getIndex(unit.x,unit.y);

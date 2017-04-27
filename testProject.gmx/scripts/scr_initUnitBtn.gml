@@ -6,4 +6,6 @@ btnIdList[|0] = 0;
 
 var btnTypeList = ds_list_create() ;
 btnTypeList[|0] = 5;
-scr_biankuangBtnMode(biankuang,btnIdList,btnTypeList);
+biankuang.mode = bkActionMode.btnChangeMode;
+biankuang.btnChangeNextMode = bkActionMode.unitActiveMode;
+scr_initBtn(biankuang,btnIdList,btnTypeList);
