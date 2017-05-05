@@ -100,6 +100,7 @@
       <sprite>sprites\debug_spt</sprite>
       <sprite>sprites\btn_spt</sprite>
       <sprite>sprites\yinying_spt</sprite>
+      <sprite>sprites\number_spt</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
