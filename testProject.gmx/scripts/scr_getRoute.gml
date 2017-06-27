@@ -2,7 +2,7 @@
 argument0 地图栅格
 argument1 起始坐标 数组
 argument2 中止坐标 数组
-argument3 最大行动力
+argument3 移动单位
 返回 Map 
 key routeList 坐标列表
 key totalCost 总消耗行动力
@@ -12,7 +12,8 @@ key totalCost 总消耗行动力
 var mapGrid = argument0;
 var startIndex = argument1;
 var endIndex = argument2;
-var maxCost = argument3;
+var unit = argument3;
+var maxCost = unit.movePoint;
 
 
 
@@ -48,7 +49,7 @@ while(true){
         returnMap = minCostMap;
         break;
     }
-    var endRouteMap = scr_insertAroundBlock(allRouteMapList,minCostMap,mapGrid,endIndex);
+    var endRouteMap = scr_insertAroundBlock(allRouteMapList,minCostMap,mapGrid,endIndex,unit);
    
     ds_map_destroy(minCostMap);
     

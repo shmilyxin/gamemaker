@@ -26,7 +26,7 @@ if(ds_list_size(teriList)>0){
         var startPos = scr_getIndex(unit.x,unit.y);
         var endPos = scr_getIndex(block.x,block.y);
         
-        var routeMap = scr_getRoute(mapGrid,startPos,endPos,unit.movePoint);
+        var routeMap = scr_getRoute(mapGrid,startPos,endPos,unit);
         if(!is_undefined(routeMap)){
         var key = string(endPos[0])+"_"+string(endPos[1]);
             ds_map_add_map(returnMap,key,routeMap);

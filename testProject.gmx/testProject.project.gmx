@@ -119,6 +119,9 @@
       <script>scripts\scr_initLevel.gml</script>
       <script>scripts\scr_moveView.gml</script>
       <script>scripts\scr_readMap.gml</script>
+      <scripts name="block">
+        <script>scripts\scr_getMovePointByBlock.gml</script>
+      </scripts>
     </scripts>
     <scripts name="utils">
       <scripts name="debug">
