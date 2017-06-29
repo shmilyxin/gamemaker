@@ -9,5 +9,8 @@ if(is_string(key)){
 }
 switch(key){
     case 1 : return wangzi1_obj;
+    case 2 : return huozhanshia_obj;
+    case 3 : return shuizhanshia_obj;
+    case 4 : return fengzhanshia_obj;
 }
 

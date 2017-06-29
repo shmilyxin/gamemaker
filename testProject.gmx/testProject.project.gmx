@@ -64,6 +64,9 @@
     <sprite>sprites\main_controler_spt</sprite>
     <sprites name="unit">
       <sprite>sprites\wangzi1_spt</sprite>
+      <sprite>sprites\huozhanshia_spt</sprite>
+      <sprite>sprites\shuizhanshia_spt</sprite>
+      <sprite>sprites\fengzhanshia_spt</sprite>
     </sprites>
     <sprite>sprites\biankuang_spt</sprite>
     <sprites name="terrain">
@@ -101,6 +104,7 @@
       <sprite>sprites\btn_spt</sprite>
       <sprite>sprites\yinying_spt</sprite>
       <sprite>sprites\number_spt</sprite>
+      <sprite>sprites\alarm_spt</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -110,6 +114,9 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="map">
+      <scripts name="block">
+        <script>scripts\scr_getMovePointByBlock.gml</script>
+      </scripts>
       <script>scripts\scr_createBuildArray.gml</script>
       <script>scripts\scr_createInstanceGrid.gml</script>
       <script>scripts\scr_createUnitMap.gml</script>
@@ -119,9 +126,6 @@
       <script>scripts\scr_initLevel.gml</script>
       <script>scripts\scr_moveView.gml</script>
       <script>scripts\scr_readMap.gml</script>
-      <scripts name="block">
-        <script>scripts\scr_getMovePointByBlock.gml</script>
-      </scripts>
     </scripts>
     <scripts name="utils">
       <scripts name="debug">
@@ -186,6 +190,8 @@
       <script>scripts\scr_unitMove.gml</script>
       <script>scripts\scr_unitSelect.gml</script>
       <script>scripts\scr_replaceUnit.gml</script>
+      <script>scripts\scr_showDetail.gml</script>
+      <script>scripts\scr_clearDetail.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -196,6 +202,9 @@
     <objects name="unit">
       <object>objects\abstractUnit_obj</object>
       <object>objects\wangzi1_obj</object>
+      <object>objects\huozhanshia_obj</object>
+      <object>objects\shuizhanshia_obj</object>
+      <object>objects\fengzhanshia_obj</object>
     </objects>
     <objects name="caidankuang">
       <object>objects\btn_obj</object>
@@ -229,6 +238,7 @@
       <object>objects\option_obj</object>
       <object>objects\select_obj</object>
       <object>objects\yinying_obj</object>
+      <object>objects\alarmDetail_obj</object>
     </objects>
   </objects>
   <timelines name="timelines">

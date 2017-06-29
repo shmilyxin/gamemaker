@@ -60,7 +60,7 @@
           <argument>
             <kind>1</kind>
             <string>moveableFlag = 1;
-alarm[0] = 5;
+
 </string>
           </argument>
         </arguments>
@@ -107,6 +107,7 @@ if keyboard_check(ord('S'))
 }else{
    downFlag = 0;
 }
+var movingFlagBefore = movingFlag;
 
 var xDirection = leftFlag+rightFlag;
 var yDirection = upFlag+downFlag;
@@ -124,6 +125,12 @@ else if(xDirection!=0&amp;&amp;yDirection!=0){
 else if(xDirection==0&amp;&amp;yDirection==0){
     movingFlag = 0;
     directionFlag = 0;
+}
+
+if(movingFlagBefore!=movingFlag){
+    moveableFlag = 1;
+}else{
+    
 }
 /**
 
@@ -148,6 +155,7 @@ if(movingFlag==1&amp;&amp;moveableFlag==1){
             }
          }
         moveableFlag = 0;
+        alarm[0] = 5;
 }
     
 
