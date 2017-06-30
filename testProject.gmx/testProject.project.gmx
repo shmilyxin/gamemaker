@@ -106,10 +106,17 @@
       <sprite>sprites\number_spt</sprite>
       <sprite>sprites\alarm_spt</sprite>
     </sprites>
+    <sprites name="tiger">
+      <sprite>sprites\tiger_spt</sprite>
+      <sprite>sprites\human_spt</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\title_bg</background>
     <background>background\map_bg</background>
+    <backgrounds name="tiger">
+      <background>background\tiger_bg</background>
+    </backgrounds>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
