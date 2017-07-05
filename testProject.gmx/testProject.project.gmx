@@ -201,7 +201,7 @@
       <script>scripts\scr_clearDetail.gml</script>
     </scripts>
     <scripts name="tiger">
-      <script>scripts\scr_initTgerGlobal.gml</script>
+      <script>scripts\scr_initTigerGlobal.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
