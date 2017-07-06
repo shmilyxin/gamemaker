@@ -202,6 +202,8 @@
     </scripts>
     <scripts name="tiger">
       <script>scripts\scr_initTigerGlobal.gml</script>
+      <script>scripts\scr_createTiger.gml</script>
+      <script>scripts\scr_createHuman.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -254,6 +256,7 @@
       <object>objects\tiger_controler_obj</object>
       <object>objects\tiger_obj</object>
       <object>objects\human_obj</object>
+      <object>objects\piece_obj</object>
     </objects>
   </objects>
   <timelines name="timelines">

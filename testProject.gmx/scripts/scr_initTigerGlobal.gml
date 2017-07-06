@@ -2,7 +2,7 @@ globalvar tigerGlobalMap;
 tigerGlobalMap = ds_map_create();
 pointInfoMap = ds_map_create();
 var sportKeyStr = ""+
-"0_2"+","+"52"+","+"4"+","+"204"+","+"26"+";"+
+"0_2"+","+"52"+","+"4"+","+"206"+","+"26"+";"+
 "1_1"+","+"16"+","+"16"+","+"170"+","+"62"+";"+
 "1_3"+","+"32"+","+"32"+","+"242"+","+"62"+";"+
 "2_0"+","+"21"+","+"21"+","+"66"+","+"96"+";"+
@@ -32,11 +32,42 @@ var sportKeyStr = ""+
 "6_4"+","+"138"+","+"138"+","+"346"+","+"448"+";"+
 "7_1"+","+"80"+","+"64"+","+"170"+","+"486"+";"+
 "7_3"+","+"160"+","+"128"+","+"242"+","+"486"+";"+
-"8_2"+","+"200"+","+"8"+","+"204"+","+"522"+";";
-var keyList = scr_splitToList(sportKeyStr,",");
+"8_2"+","+"200"+","+"8"+","+"206"+","+"522"+";";
+var keyList = scr_splitToList(sportKeyStr,";");
 for(var i = 0;i<ds_list_size(keyList);i++){
-    
+    var valueList= scr_splitToList(keyList[|i],",");
+    var blockMap = ds_map_create();
+    var key = valueList[|0];
+    var moveAbleFlag = valueList[|1];
+    var jumpAbleFlag = valueList[|2];
+    var xPos = valueList[|3];
+    var yPos = valueList[|4];
+    blockMap[? "moveAbleFlag"] =real(moveAbleFlag);
+    blockMap[? "jumpAbleFlag"] =real(jumpAbleFlag);
+    blockMap[? "xPos"] =real(xPos);
+    blockMap[? "yPos"] =real(yPos);
+    blockMap[? "instance"] = undefined;
+    ds_map_add_map(pointInfoMap,key,blockMap);
+    ds_list_destroy(valueList);
 }
-globalvar ab ;
-ab = 0;
+ds_map_add_map(global.tigerGlobalMap,"pointInfoMap",pointInfoMap);
+ds_list_destroy(keyList);
+scr_createTiger("0_2");
+scr_createHuman("4_1");
+scr_createHuman("4_2");
+scr_createHuman("4_3");
+scr_createHuman("4_4");
+scr_createHuman("5_1");
+scr_createHuman("5_2");
+scr_createHuman("5_3");
+scr_createHuman("5_4");
+scr_createHuman("4_0");
+scr_createHuman("5_0");
+scr_createHuman("3_0");
+scr_createHuman("3_1");
+scr_createHuman("3_2");
+scr_createHuman("3_3");
+scr_createHuman("3_4");
+
+
 
