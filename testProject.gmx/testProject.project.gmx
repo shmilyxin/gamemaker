@@ -109,6 +109,7 @@
     <sprites name="tiger">
       <sprite>sprites\tiger_spt</sprite>
       <sprite>sprites\human_spt</sprite>
+      <sprite>sprites\yinyingtiger_spt</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -201,9 +202,11 @@
       <script>scripts\scr_clearDetail.gml</script>
     </scripts>
     <scripts name="tiger">
-      <script>scripts\scr_initTigerGlobal.gml</script>
       <script>scripts\scr_createTiger.gml</script>
       <script>scripts\scr_createHuman.gml</script>
+      <script>scripts\scr_findTigerReachAble.gml</script>
+      <script>scripts\scr_getNewKeyByDirect.gml</script>
+      <script>scripts\scr_initTigerGlobal.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -254,16 +257,20 @@
     </objects>
     <objects name="tiger">
       <object>objects\tiger_controler_obj</object>
-      <object>objects\tiger_obj</object>
       <object>objects\human_obj</object>
+      <object>objects\human_player_obj</object>
       <object>objects\piece_obj</object>
+      <object>objects\player_obj</object>
+      <object>objects\tiger_obj</object>
+      <object>objects\tiger_player_obj</object>
+      <object>objects\yinyingtiger_obj</object>
     </objects>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\tl_timeline0</timeline>
   </timelines>
   <rooms name="rooms">
-    <room>rooms\room2</room>
+    <room>rooms\tiger_rooms</room>
     <room>rooms\title_room</room>
     <room>rooms\state1_room</room>
   </rooms>
