@@ -52,21 +52,23 @@ type = 1;
             <kind>1</kind>
             <string>event_inherited();
 var tigerPlayer = global.tigerGlobalMap[? "tigerPlayer"];
-if(tigerPlayer.isPlayer1||tigerPlayer.isPlayer2){
-with(yinying_obj){
-    instance_destroy();
+var turn =  global.tigerGlobalMap[? "turn"];
+if(real(turn)%2==0){
+    return 0;
 }
-if(id.selected = false){
-    with(tiger_obj){
+if(tigerPlayer.isPlayer1||tigerPlayer.isPlayer2){
+    with(yinying_obj){
+        instance_destroy();
+    }
+    if(id.selected = false){
+        with(tiger_obj){
         select = false;
     }
-
-
-ds_map_add(global.tigerGlobalMap,"selectPiece",id);
-scr_findTigerReachAble(id);
-}else{
+    ds_map_add(global.tigerGlobalMap,"selectPiece",id);
+    scr_findTigerReachAble(id);
+    }else{
     
-}
+    }
 }
 </string>
           </argument>
