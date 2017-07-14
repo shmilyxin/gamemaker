@@ -30,24 +30,18 @@ var pointInfoMap = global.tigerGlobalMap[? "pointInfoMap"];
 var sourcePointInfo = pointInfoMap[? selectPiece.pointKey];
 var targetPointInfo = pointInfoMap[? id.pointKey];
 with(selectPiece){
-        move_towards_point(targetPointInfo[? "xPos"], targetPointInfo[? "yPos"], 5); 
-        while(point_distance(x, y, targetPointInfo[? "xPos"], targetPointInfo[? "yPos"]) &gt; 5){
-            speed = 5;
-        }
-        x = targetPointInfo[? "xPos"];
-        y = targetPointInfo[? "yPos"];
-        speed = 0;
-        
+        id.targetPointInfo = targetPointInfo;
+        id.alarm[0]=1;
 }
-  
-
 selectPiece.pointKey = id.pointKey;
 sourcePointInfo[? "instance"] = undefined;
 targetPointInfo[? "instance"] = selectPiece;
 with(yinyingtiger_obj){
     instance_destroy();
 }
-
+with(select_ring_obj){
+    instance_destroy();
+}
 
 </string>
           </argument>

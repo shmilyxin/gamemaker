@@ -33,9 +33,15 @@ switch(direct){
     newKey = scr_getIndexKey(real(keyArray[0])+distance,real(keyArray[1]));
     break;
     case 2:
+    if(((real(keyArray[0])==7&&real(keyArray[1])==3)&&distance == 1)||((real(keyArray[0])==1&&real(keyArray[1])==3)&&distance == 1)){
+        distance+=1;
+    }
     newKey = scr_getIndexKey(real(keyArray[0]),real(keyArray[1])-distance);
     break;
     case 1:
+    if(((real(keyArray[0])==1&&real(keyArray[1])==1)&&distance == 1)||((real(keyArray[0])==7&&real(keyArray[1])==1)&&distance == 1)){
+        distance+=1;
+    }
     newKey = scr_getIndexKey(real(keyArray[0]),real(keyArray[1])+distance);
     break;
 }

@@ -1,7 +1,6 @@
-var tiger = argument0;
-
+var human = argument0;
 var pointInfoMap = global.tigerGlobalMap[? "pointInfoMap"];
-var key = tiger.pointKey;
+var key = human.pointKey;
 var pointInfo = pointInfoMap[? key];
 var moveAbleFlag = pointInfo[? "moveAbleFlag"];
 var jumpAbleFlag = pointInfo[? "jumpAbleFlag"];

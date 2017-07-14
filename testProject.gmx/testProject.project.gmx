@@ -110,6 +110,7 @@
       <sprite>sprites\tiger_spt</sprite>
       <sprite>sprites\human_spt</sprite>
       <sprite>sprites\yinyingtiger_spt</sprite>
+      <sprite>sprites\ring_spt</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -205,8 +206,10 @@
       <script>scripts\scr_createTiger.gml</script>
       <script>scripts\scr_createHuman.gml</script>
       <script>scripts\scr_findTigerReachAble.gml</script>
+      <script>scripts\scr_findHumanReachAble.gml</script>
       <script>scripts\scr_getNewKeyByDirect.gml</script>
       <script>scripts\scr_initTigerGlobal.gml</script>
+      <script>scripts\scr_selectPiece.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -264,6 +267,7 @@
       <object>objects\tiger_obj</object>
       <object>objects\tiger_player_obj</object>
       <object>objects\yinyingtiger_obj</object>
+      <object>objects\select_ring_obj</object>
     </objects>
   </objects>
   <timelines name="timelines">

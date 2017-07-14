@@ -27,6 +27,49 @@
             <kind>1</kind>
             <string>pointKey = undefined;
 selected = false;
+targetPointInfo = undefined;
+moivingFlag = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+var moveTargetX = targetPointInfo[? "xPos"];
+var moveTargetY = targetPointInfo[? "yPos"];
+if(abs(x-moveTargetX)+abs(y-moveTargetY)&gt;5){
+    move_towards_point(moveTargetX, moveTargetY, 5);
+    movingFlag = true;
+    alarm[0]=1;
+}else{
+    targetPointInfo = undefined;
+    selected = false;
+    movingFlag = false;
+    var turn = global.tigerGlobalMap[? "turn"];
+    turn += 1;
+    global.tigerGlobalMap[? "turn"] = turn;
+    x = moveTargetX;
+    y = moveTargetY;
+    speed = 0;
+    global.tigerGlobalMap[? "selectPiece"] = undefined;
+}
 </string>
           </argument>
         </arguments>
