@@ -205,11 +205,14 @@
     <scripts name="tiger">
       <script>scripts\scr_createTiger.gml</script>
       <script>scripts\scr_createHuman.gml</script>
-      <script>scripts\scr_findTigerReachAble.gml</script>
       <script>scripts\scr_findHumanReachAble.gml</script>
+      <script>scripts\scr_findTigerReachAble.gml</script>
       <script>scripts\scr_getNewKeyByDirect.gml</script>
       <script>scripts\scr_initTigerGlobal.gml</script>
       <script>scripts\scr_selectPiece.gml</script>
+      <script>scripts\scr_turnChange.gml</script>
+      <script>scripts\scr_checkTigerMoJAble.gml</script>
+      <script>scripts\scr_checkGameOver.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -268,6 +271,7 @@
       <object>objects\tiger_player_obj</object>
       <object>objects\yinyingtiger_obj</object>
       <object>objects\select_ring_obj</object>
+      <object>objects\player_ring_obj</object>
     </objects>
   </objects>
   <timelines name="timelines">

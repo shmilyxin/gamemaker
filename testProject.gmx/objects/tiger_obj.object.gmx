@@ -61,10 +61,8 @@ if(abs(x-moveTargetX)+abs(y-moveTargetY)&gt;5){
     targetPointInfo = undefined;
     selected = false;
     movingFlag = false;
-    var turn = global.tigerGlobalMap[? "turn"];
+    scr_turnChange();
     
-    turn += 1;
-    global.tigerGlobalMap[? "turn"] = turn;
     x = moveTargetX;
     y = moveTargetY;
     speed = 0;

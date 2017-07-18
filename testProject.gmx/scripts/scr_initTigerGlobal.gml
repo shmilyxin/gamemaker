@@ -3,8 +3,9 @@ tigerGlobalMap = ds_map_create();
 pointInfoMap = ds_map_create();
 var sportKeyStr = ""+
 "0_2"+","+"52"+","+"4"+","+"206"+","+"26"+";"+
-"1_1"+","+"81"+","+"16"+","+"170"+","+"62"+";"+
-"1_3"+","+"162"+","+"32"+","+"242"+","+"62"+";"+
+"1_1"+","+"81"+","+"17"+","+"170"+","+"62"+";"+
+"1_2"+","+"15"+","+"4"+","+"206"+","+"62"+";"+
+"1_3"+","+"162"+","+"34"+","+"242"+","+"62"+";"+
 "2_0"+","+"21"+","+"21"+","+"66"+","+"96"+";"+
 "2_1"+","+"7"+","+"5"+","+"136"+","+"96"+";"+
 "2_2"+","+"255"+","+"55"+","+"206"+","+"96"+";"+
@@ -30,8 +31,9 @@ var sportKeyStr = ""+
 "6_2"+","+"255"+","+"203"+","+"206"+","+"448"+";"+
 "6_3"+","+"11"+","+"10"+","+"276"+","+"448"+";"+
 "6_4"+","+"138"+","+"138"+","+"346"+","+"448"+";"+
-"7_1"+","+"81"+","+"64"+","+"170"+","+"486"+";"+
-"7_3"+","+"162"+","+"128"+","+"242"+","+"486"+";"+
+"7_1"+","+"81"+","+"65"+","+"170"+","+"486"+";"+
+"7_2"+","+"15"+","+"8"+","+"206"+","+"486"+";"+
+"7_3"+","+"162"+","+"130"+","+"242"+","+"486"+";"+
 "8_2"+","+"200"+","+"8"+","+"206"+","+"522"+";";
 var keyList = scr_splitToList(sportKeyStr,";");
 for(var i = 0;i<ds_list_size(keyList);i++){
@@ -46,7 +48,8 @@ for(var i = 0;i<ds_list_size(keyList);i++){
     blockMap[? "jumpAbleFlag"] =real(jumpAbleFlag);
     blockMap[? "xPos"] =real(xPos);
     blockMap[? "yPos"] =real(yPos);
-    blockMap[? "instance"] = undefined;
+    var instanceList = ds_list_create();
+    ds_map_add_list(blockMap,"instanceList",instanceList);
     ds_map_add_map(pointInfoMap,key,blockMap);
     ds_list_destroy(valueList);
 }
@@ -75,6 +78,7 @@ var tigerPlayer = instance_create(32,32,tiger_player_obj);
 tigerPlayer.isPlayer1 = true;
 var humanPlayer = instance_create(32,480,human_player_obj);
 humanPlayer.isPlayer2 = true;
+instance_create(tigerPlayer.x,tigerPlayer.y,player_ring_obj);
 ds_map_add(global.tigerGlobalMap,"tigerPlayer",tigerPlayer);
 ds_map_add(global.tigerGlobalMap,"humanPlayer",humanPlayer);
 
